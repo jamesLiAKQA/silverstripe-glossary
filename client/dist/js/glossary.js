@@ -196,7 +196,7 @@ const sanitiseShortCodeProperties = (rawProperties) => {
       onSubmit(v) {
         const termID = v.data.glossary;
         // The selected text to be inserted a terminology
-        const selectedText = editor.selection.getContent();
+        const selectedText = editor.selection.getContent({format : 'text'});
         // No text was selected
         if (!selectedText) {
           return;
