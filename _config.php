@@ -4,6 +4,7 @@ use TheSceneman\SilverStripeGlossary\View\GlossaryShortcodeProvider;
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\Core\Manifest\ModuleResourceLoader;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorConfig;
+use SilverStripe\Core\Environment;
 
 // Register our glossary shortcode handler
 ShortcodeParser::get('default')
