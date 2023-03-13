@@ -201,7 +201,7 @@ const sanitiseShortCodeProperties = (rawProperties) => {
         if (!selectedText) {
           return;
         }
-        const newText = `<span style="color:white; background-color: black"  data-shortcode="glossary_term" data-id="${termID}">${selectedText}</span>`;
+        const newText = `<span style="text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: black;" data-shortcode="glossary_term" data-id="${termID}">${selectedText}</span>`;
         editor.insertContent(newText);
       },
     });
@@ -294,7 +294,7 @@ const sanitiseShortCodeProperties = (rawProperties) => {
       while (match) {
         const { original, properties } = match;
         // Transform the shortcode to raw html
-        const raw = `<span style="color:white; background-color: black"  data-shortcode="glossary_term" data-id="${properties.id}">${match.content}</span>`;
+        const raw = `<span style="text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: black;"  data-shortcode="glossary_term" data-id="${properties.id}">${match.content}</span>`;
         content = content.replace(original, raw);
         match = shortCodeParser.match('glossary_term', true, content);
       }
